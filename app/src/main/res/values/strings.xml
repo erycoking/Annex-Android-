@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Annex</string>
+    <string name="registration_form">Client Registration Form</string>
+    <string name="client_details">Client Details</string>
+    <string name="first_name">First Name</string>
+    <string name="other_names">Other Names</string>
+    <string name="address">Address</string>
+    <string name="customer_id">Customer Id</string>
+    <string name="national_id">National Id</string>
+    <string name="mobile_no">Mobile Number</string>
+    <string name="photo">Upload Photo</string>
+    <string name="register_client">Create new client</string>
+    <string name="first_name_error">Enter valid name</string>
+    <string name="address_error">Enter Valid Address</string>
+    <string name="national_id_error">Enter valid National Id</string>
+    <string name="mobile_error">Enter valid Mobile Number</string>
+</resources>
