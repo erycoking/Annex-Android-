@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tool:context=".EditClientActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -176,7 +179,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/photo_layout"
                 android:layout_below="@+id/mobileNo_layout">
 
@@ -202,20 +205,46 @@
                         android:layout_height="@dimen/default_image_height"
                         android:layout_alignParentRight="true"
                         android:layout_marginLeft="@dimen/default_margin"
-                        android:visibility="invisible"
+                        android:visibility="gone"
                         />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
-            <Button
-                android:layout_width="wrap_content"
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/photo_layout"
-                android:background="@drawable/rounded_button"
-                android:text="@string/register_client"/>
+                android:id="@+id/btn_layout"
+                android:layout_below="@+id/photo_layout">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/default_gap">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:padding="@dimen/default_gap"
+                        android:background="@drawable/rounded_button"
+                        android:text="@string/cancel_btn_text"
+                        android:id="@+id/cancel_update"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/default_gap"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/rounded_button"
+                        android:text="@string/update_client"
+                        android:id="@+id/saveUpdate"
+                        />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
 
         </RelativeLayout>
 

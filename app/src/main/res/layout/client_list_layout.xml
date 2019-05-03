@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30dp"
+    android:id="@+id/parent_layout">
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/default_text_size"
+        android:padding="@dimen/default_gap"
+        android:id="@+id/name"
+        android:text="@string/full_names"
+        android:textAppearance="?android:textAppearanceLarge"
+        />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/default_text_size"
+        android:textAlignment="center"
+        android:padding="@dimen/default_gap"
+        android:text="@string/customer_id"
+        android:id="@+id/customer"
+        android:textAppearance="?android:textAppearanceLarge"
+        />
+
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/default_text_size"
+        android:padding="@dimen/default_gap"
+        android:text="@string/mobile_no"
+        android:id="@+id/mobile"
+        android:textAppearance="?android:textAppearanceLarge"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/default_gap"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/rounded_button"
+        android:id="@+id/edit_btn"
+        android:text="@string/edit_btn_text"/>
+
+</LinearLayout>

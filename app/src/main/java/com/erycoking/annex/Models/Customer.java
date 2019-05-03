@@ -18,6 +18,10 @@ public class Customer implements Serializable {
     @Expose
     private String OtherNames;
 
+    @SerializedName("FullName")
+    @Expose
+    private String FullName;
+
     @SerializedName("Address")
     @Expose
     private String Address;
@@ -40,6 +44,17 @@ public class Customer implements Serializable {
     public Customer(String firstName, String otherNames, String address, int nationalId, int mobileNo, String photo) {
         FirstName = firstName;
         OtherNames = otherNames;
+        Address = address;
+        NationalId = nationalId;
+        MobileNo = mobileNo;
+        Photo = photo;
+    }
+
+    public Customer(int customerId, String firstName, String otherNames, String fullName, String address, int nationalId, int mobileNo, String photo) {
+        CustomerId = customerId;
+        FirstName = firstName;
+        OtherNames = otherNames;
+        FullName = fullName;
         Address = address;
         NationalId = nationalId;
         MobileNo = mobileNo;
@@ -80,6 +95,14 @@ public class Customer implements Serializable {
         OtherNames = otherNames;
     }
 
+    public String getFullName() {
+        return FullName;
+    }
+
+    public void setFullName(String fullNames) {
+        FullName = fullNames;
+    }
+
     public String getAddress() {
         return Address;
     }
@@ -118,6 +141,7 @@ public class Customer implements Serializable {
                 "CustomerId=" + CustomerId +
                 ", FirstName='" + FirstName + '\'' +
                 ", OtherNames='" + OtherNames + '\'' +
+                ", FullNames='" + FullName + '\'' +
                 ", Address='" + Address + '\'' +
                 ", NationalId=" + NationalId +
                 ", MobileNo=" + MobileNo +

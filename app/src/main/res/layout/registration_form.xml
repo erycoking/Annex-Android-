@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tool:context=".RegistrationActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -154,10 +157,11 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/mobileNo_layout">
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobileNo_layout"
+                android:id="@+id/photo_card">
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/default_gap">
@@ -170,30 +174,60 @@
                         android:padding="@dimen/default_title_padding"
                         android:textAlignment="center"
                         android:layout_alignParentLeft="true"
-                        android:background="@drawable/rounded_button2"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/rounded_button"
                         android:id="@+id/client_photo"
                         />
 
                     <ImageView
                         android:layout_width="@dimen/default_image_width"
                         android:layout_height="@dimen/default_image_height"
-                        android:layout_alignParentRight="true"
+                        android:layout_toRightOf="@id/client_photo"
                         android:layout_marginLeft="@dimen/default_margin"
-                        android:visibility="invisible"
+                        android:visibility="gone"
                         android:id="@+id/client_image"
                         />
-                </LinearLayout>
+
+                </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
 
-            <Button
-                android:layout_width="wrap_content"
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:background="@drawable/rounded_button"
-                android:id="@+id/saveClient"
-                android:text="@string/register_client"/>
+                android:layout_below="@+id/photo_card"
+                android:id="@+id/btn_card">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/default_gap">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/default_gap"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/rounded_button"
+                        android:id="@+id/cancel_btn"
+                        android:text="@string/cancel_btn_text"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/default_gap"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/rounded_button"
+                        android:id="@+id/saveClient"
+                        android:text="@string/register_client"/>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
 
         </RelativeLayout>
 

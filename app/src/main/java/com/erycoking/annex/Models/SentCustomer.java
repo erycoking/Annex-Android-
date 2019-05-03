@@ -3,6 +3,9 @@ package com.erycoking.annex.Models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import okhttp3.MultipartBody;
+import retrofit2.http.Multipart;
+
 public class SentCustomer {
 
     @SerializedName("CustomerId")
@@ -28,21 +31,24 @@ public class SentCustomer {
     @Expose
     private int MobileNo;
 
-    @SerializedName("Photo")
-    @Expose
-    private byte[] Photo;
-
     public SentCustomer() {
     }
 
-    public SentCustomer(int customerId, String firstName, String otherNames, String address, int nationalId, int mobileNo, byte[] photo) {
+    public SentCustomer(int customerId, String firstName, String otherNames, String address, int nationalId, int mobileNo) {
         CustomerId = customerId;
         FirstName = firstName;
         OtherNames = otherNames;
         Address = address;
         NationalId = nationalId;
         MobileNo = mobileNo;
-        Photo = photo;
+    }
+
+    public SentCustomer(String firstName, String otherNames, String address, int nationalId, int mobileNo) {
+        FirstName = firstName;
+        OtherNames = otherNames;
+        Address = address;
+        NationalId = nationalId;
+        MobileNo = mobileNo;
     }
 
     public int getCustomerId() {
@@ -93,24 +99,15 @@ public class SentCustomer {
         MobileNo = mobileNo;
     }
 
-    public byte[] getPhoto() {
-        return Photo;
-    }
-
-    public void setPhoto(byte[] photo) {
-        Photo = photo;
-    }
-
     @Override
     public String toString() {
-        return "Customer{" +
+        return "SentCustomer{" +
                 "CustomerId=" + CustomerId +
                 ", FirstName='" + FirstName + '\'' +
                 ", OtherNames='" + OtherNames + '\'' +
                 ", Address='" + Address + '\'' +
                 ", NationalId=" + NationalId +
                 ", MobileNo=" + MobileNo +
-                ", Photo='" + Photo + '\'' +
                 '}';
     }
 }

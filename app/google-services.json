@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "641674082179",
+    "firebase_url": "https://annex-ba2bb.firebaseio.com",
+    "project_id": "annex-ba2bb",
+    "storage_bucket": "annex-ba2bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641674082179:android:d7bcdabe21e11bc2",
+        "android_client_info": {
+          "package_name": "com.erycoking.annex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641674082179-1001koi9talrfv5njovd7dpm6ubq11hi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.erycoking.annex",
+            "certificate_hash": "021e7368d0e909e3b8178c65968cca2f8bf76429"
+          }
+        },
+        {
+          "client_id": "641674082179-66gm35au7mf3v3pvig005il0095aac6a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsFolOCrH2yyC2AN4p8vjxmp4SXMQ5xMI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641674082179-66gm35au7mf3v3pvig005il0095aac6a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
